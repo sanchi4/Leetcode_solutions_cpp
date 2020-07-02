@@ -16,3 +16,6 @@ public:
         return ele;
     }
 };
+
+//Space:O(1)
+//Time:O(n)

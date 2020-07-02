@@ -26,3 +26,6 @@ public:
             return false;
     }
 };
+
+//time:O(n)
+//space:O(n)

@@ -38,3 +38,6 @@ public:
         return ans;
     }
 };
+
+//Space:O(n)
+//Time:O(n)

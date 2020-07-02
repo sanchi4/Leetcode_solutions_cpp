@@ -12,3 +12,6 @@ public:
         return dp[n];
     }
 };
+
+//Space:O(n)
+//Time:O(n)
