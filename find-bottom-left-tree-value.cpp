@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/binary-tree-right-side-view/
+https://leetcode.com/problems/find-bottom-left-tree-value/
 
 /**
  * Definition for a binary tree node.
@@ -13,19 +13,20 @@
  */
 class Solution {
 public:
-    void rightview(TreeNode* root, int level, int& max_level,vector<int>& ans){
+    void left(TreeNode* root, int level, int& max_level,int& ans){
         if(!root)return;
         if(max_level<level){
-            ans.push_back(root->val);
+            ans=root->val;
             max_level=level;
         }
-        if(root->right)rightview(root->right,level+1,max_level,ans);
-        if(root->left)rightview(root->left,level+1,max_level,ans);
+        if(root->left)left(root->left,level+1,max_level,ans);
+        if(root->right)left(root->right,level+1,max_level,ans);
     }
-    vector<int> rightSideView(TreeNode* root) {
-        vector<int> ans;
+    int findBottomLeftValue(TreeNode* root) {
+        int ans=0;
         int max_level=-1;
-        rightview(root,0,max_level,ans);
+        left(root,0,max_level,ans);
         return ans;
     }
+    
 };
